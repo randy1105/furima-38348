@@ -13,7 +13,7 @@
                 <mxCell id="6" value="Items" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=20;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
                     <mxGeometry x="631" y="40" width="280" height="240" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="product_name(商品名)&#10;product_description(商品説明)&#10;category_id(カテゴリー)&#10;status_id(状態)&#10;freight_id(配送料)&#10;shipping_prefecture_id(発送元)&#10;ship_date_id(発送日)&#10;price(価格)&#10;user_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=18;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="6">
+                <mxCell id="7" value="product_name(商品名)&#10;product_description(商品説明)&#10;category_id(カテゴリー)&#10;status_id(状態)&#10;freight_id(配送料)&#10;shipping_prefecture_id(発送元)&#10;ship_date_id(発送日)&#10;price(価格)&#10;user" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=18;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="6">
                     <mxGeometry y="30" width="280" height="210" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;entryX=0;entryY=0.5;entryDx=0;entryDy=0;jumpSize=17;strokeWidth=4;endSize=22;exitX=1;exitY=0.424;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="3" target="6">
@@ -31,13 +31,13 @@
                 <mxCell id="33" value="Addresses" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=20;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
                     <mxGeometry x="631" y="580" width="280" height="230" as="geometry"/>
                 </mxCell>
-                <mxCell id="34" value="post_code(郵便番号)&#10;prefecture(都道府県)&#10;municipalities（市区町村）&#10;block(番地)&#10;building_name(建物名)&#10;phone_number(電話番号)&#10;order_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=18;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="33">
+                <mxCell id="34" value="post_code(郵便番号)&#10;prefecture_id(都道府県)&#10;municipalities(市区町村)&#10;block(番地)&#10;building_name(建物名)&#10;phone_number(電話番号)&#10;order" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=18;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="33">
                     <mxGeometry y="30" width="280" height="200" as="geometry"/>
                 </mxCell>
                 <mxCell id="35" value="Orders" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=20;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
                     <mxGeometry x="365" y="370" width="220" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" value="user_id&#10;item_id&#10;address_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=18;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="35">
+                <mxCell id="36" value="user&#10;item" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=18;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="35">
                     <mxGeometry y="30" width="220" height="130" as="geometry"/>
                 </mxCell>
                 <mxCell id="40" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startSize=22;endSize=22;strokeWidth=4;jumpSize=17;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3" target="36">
