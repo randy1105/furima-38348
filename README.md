@@ -22,12 +22,12 @@
 | Column                 | Type       | Options                        |
 | ---------------------- | ---------- | ------------------------------ |
 | product_name           | string     | null: false,                   |
-| product_description    | string     | null: false                    |
+| product_description    | text       | null: false                    |
 | category_id            | integer    | null: false                    |
 | status_id              | integer    | null: false                    |
 | freight_id             | integer    | null: false                    |
-| shipping_prefecture_id | string     | null: false                    |
-| ship_date              | string     | null: false                    |
+| shipping_prefecture_id | integer    | null: false                    |
+| ship_date_id           | integer    | null: false                    |
 | price                  | integer    | null: false                    |
 | user                   | references | null: false, foreign_key: true |
 
@@ -42,7 +42,7 @@
 | Column              | Type       | Options                 |
 | ------------------- | ---------- | ----------------------- |
 | post_code           | string     | null: false,            |
-| prefecture          | string     | null: false,            |
+| prefecture_id       | integer    | null: false,            |
 | municipalities      | string     | null: false,            |
 | block               | string     | null: false,            |
 | building_name       | string     |                         |
@@ -56,6 +56,10 @@
 
 ## ordersテーブル
 
-| prototype | references | null: false, references |
 | user      | references | null: false, references |
-| order     | references | null: false, references |
+| item      | references | null: false, references |
+
+### Association
+- belongs_to :user
+- belongs_to :item
+- has_one :address
