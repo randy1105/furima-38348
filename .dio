@@ -13,7 +13,7 @@
                 <mxCell id="6" value="Items" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=20;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
                     <mxGeometry x="631" y="40" width="280" height="240" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="product_name(商品名)&#10;product_description(商品説明)&#10;category(カテゴリー)&#10;status(状態)&#10;freight(配送料)&#10;shipping_prefecture(発送元)&#10;ship_date(発送日)&#10;price(価格)&#10;user_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=18;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="6">
+                <mxCell id="7" value="product_name(商品名)&#10;product_description(商品説明)&#10;category_id(カテゴリー)&#10;status_id(状態)&#10;freight_id(配送料)&#10;shipping_prefecture_id(発送元)&#10;ship_date_id(発送日)&#10;price(価格)&#10;user_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=18;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="6">
                     <mxGeometry y="30" width="280" height="210" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;entryX=0;entryY=0.5;entryDx=0;entryDy=0;jumpSize=17;strokeWidth=4;endSize=22;exitX=1;exitY=0.424;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="3" target="6">
