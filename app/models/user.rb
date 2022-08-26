@@ -17,6 +17,8 @@ class User < ApplicationRecord
   end
 
   validates :birthday, presence: true
+  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i
+  validates :password, format: { with: VALID_PASSWORD_REGEX }
        
   # アソシエーションはモデルを実装したタイミングで#を消す。
   # has_many :items
