@@ -4,10 +4,11 @@ class Item < ApplicationRecord
     validates :product_description
     validates :price
     validates :image
+    validates :user_id
   end
 
   belongs_to :user
-  has_one :order
+  ## has_one :order
   has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions
@@ -25,6 +26,6 @@ class Item < ApplicationRecord
     validates :ship_date_id
   end
 
-  validates :price, numericality: { with: /\A[0-9]+\z/, message: 'Half-width number' }
+  validates :price, numericality: { only_integer: true }
   validates :price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999, message: 'Out of setting range' }
 end
