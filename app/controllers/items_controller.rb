@@ -1,7 +1,6 @@
 class ItemsController < ApplicationController
-
   def index
-    ## @items = Item.all
+    @items = Item.order(created_at: :desc)
   end
 
   def new
@@ -10,7 +9,6 @@ class ItemsController < ApplicationController
     else
       redirect_to new_user_session_path
     end
-
   end
 
   def create
@@ -21,10 +19,11 @@ class ItemsController < ApplicationController
       render :new
     end
   end
-  
+
   private
 
   def item_params
-    params.require(:item).permit(:image, :product_name, :product_description, :category_id, :status_id, :freight_id, :shipping_prefecture_id, :ship_date_id, :price).merge(user_id: current_user.id)
+    params.require(:item).permit(:image, :product_name, :product_description, :category_id, :status_id, :freight_id,
+                                 :shipping_prefecture_id, :ship_date_id, :price).merge(user_id: current_user.id)
   end
 end
