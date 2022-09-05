@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
         @order_address = OrderAddress.new
       end
     else
-      redirect_to root_path
+      redirect_to new_user_session_path
     end
   end
 
@@ -20,7 +20,6 @@ class OrdersController < ApplicationController
       @order_address.save
       redirect_to root_path
     else
-      @item = Item.find(params[:item_id])
       render :index
     end
   end
