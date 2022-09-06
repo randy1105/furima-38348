@@ -12,8 +12,8 @@ class OrderAddress
     validates :item_id
     validates :token
   end
-  validates :post_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'is invalid. Include hyphen(-)' }
-  validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :post_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'はハイフンを含めて入力してください' }
+  validates :prefecture_id, numericality: { other_than: 1, message: "を入力してください" }
 
   def save
     order = Order.create(user_id: user_id, item_id: item_id)

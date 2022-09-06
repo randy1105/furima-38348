@@ -18,7 +18,7 @@ class Item < ApplicationRecord
   belongs_to :shipping_prefecture
   belongs_to :ship_date
 
-  with_options numericality: { other_than: 1 } do
+  with_options numericality: { other_than: 1, message: "を入力してください" } do
     validates :category_id
     validates :status_id
     validates :freight_id
@@ -28,5 +28,5 @@ class Item < ApplicationRecord
 
   validates :price, numericality: { only_integer: true }
   validates :price,
-            numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999, message: 'Out of setting range' }
+            numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999, message: "は範囲を超えています" }
 end
