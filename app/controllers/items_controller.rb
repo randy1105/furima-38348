@@ -27,11 +27,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    if user_signed_in?
       redirect_to root_path if Order.exists?(item_id: @item.id)
-    else
-      redirect_to redirect_to new_user_session_path
-    end
   end
 
   def update
@@ -57,7 +53,7 @@ class ItemsController < ApplicationController
     if user_signed_in?
       redirect_to action: :index unless @item.user.id == current_user.id
     else
-      redirect_to action: :index
+      redirect_to new_user_session_path
     end
   end
 
